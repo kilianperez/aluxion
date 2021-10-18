@@ -1,0 +1,82 @@
+<main 
+
+
+>
+  <section
+  
+  class="slid">
+    <div class="slid__module">
+      <div class="slid__cont">
+        <div class="slid__contnt move ver"
+        
+        >
+          <p class="slid__author"><strong>Michael W.Dreeben</strong></p>
+          <h2 class="slid__h2">Shell Dining Chair</h2>
+          <p class="slid__p">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo at
+            ducimus est. Aut tenetur excepturi id, soluta alias impedit
+            accusantium?
+          </p>
+        </div>
+        <div 
+        
+
+        
+        class="slid__contnt move">
+          <p class="slid__author"><strong>Lorem Ipsum Dolor.</strong></p>
+          <h2 class="slid__h2">Dunes Anthrazite Black</h2>
+          <p class="slid__p">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo at
+            ducimus est. Aut tenetur excepturi id, soluta alias impedit
+            accusantium?
+          </p>
+        </div>
+      </div>
+      <div class="slid__cont slid__cont--img">
+        <img
+
+        [ngStyle]="{'transform': trasladar( posicion ) }"
+          src="assets/silla_negra.png"
+          alt="imagen producto 1 "
+          class="slid__img move"
+
+        />
+        <img
+        [ngStyle]="{'transform': trasladar( posicion ) }"
+          src="assets/mesa_negra.png"
+          alt="imagen producto 2"
+          class="slid__img move"
+        />
+      </div>
+
+      <a href="#" 
+      [ngClass]="{'ver': posicion == 0}"
+      class="slid__btn ver">Product Details 1</a>
+      <a href="#" 
+      [ngClass]="{'ver': posicion == 1}"
+      class="slid__btn">Product Details 2</a>
+    </div>
+    <div class="slid__ctr">
+      <ul class="slid__ul">
+        <li
+          [ngClass]="{ 'ver': posicion == 0 }"
+          (click)="posicionTab(0)"
+          class="slid__item ver"
+        >
+          <div class="slid__num">1</div>
+          <div class="slid__txt"></div>
+          Shell Dining Chair
+        </li>
+        <li
+          [ngClass]="{ 'ver': posicion == 1 }"
+          (click)="posicionTab(1)"
+          class="slid__item"
+        >
+          <div class="slid__num">2</div>
+          <div class="slid__txt"></div>
+          Dunes Anthrazite Black
+        </li>
+      </ul>
+    </div> 
+  </section>
+</main>

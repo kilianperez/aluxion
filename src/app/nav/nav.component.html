@@ -1,0 +1,75 @@
+<header class="header">
+  <nav class="menu">
+    <div class="menu__desk">
+      <a
+        class="menu__logo"
+        [ngClass]="{ active: activar }"
+        href="#"
+        alt="logo mater"
+        >mater</a
+      >
+
+      <div
+        class="menu__hamb"
+        (click)="activeNav()"
+        [ngClass]="{ active: activar }"
+      >
+        <span class="menu__line"></span>
+        <span class="menu__line"></span>
+        <span class="menu__line"></span>
+      </div>
+    </div>
+
+    <div class="menu__vh" [ngClass]="{ active: activar }">
+      <div class="menu__mega">
+        <ul class="menu__ul">
+          <li class="menu__li">
+            <a class="menu__link" href="#">Collection</a>
+            <ul class="menu__items">
+              <li class="menu__item"><a href="#">Furniture</a></li>
+              <li class="menu__item"><a href="#">Lightng</a></li>
+              <li class="menu__item"><a href="#">Accessories</a></li>
+            </ul>
+          </li>
+          <li class="menu__li"><a class="menu__link" href="#">Desing</a></li>
+          <li class="menu__li">
+            <a class="menu__link" href="#">Craftmanship</a>
+          </li>
+          <li class="menu__li"><a class="menu__link" href="#">Ethics</a></li>
+        </ul>
+
+        <div class="menu__imgs">
+          <img
+            loading="lazy"
+            class="menu__img"
+            src="assets/sofa_blanco.png"
+            alt="img 1"
+          />
+          <img
+            loading="lazy"
+            class="menu__img"
+            src="assets/mesa_negra.png"
+            alt="img 2"
+          />
+          <img
+            loading="lazy"
+            class="menu__img"
+            src="assets/silla_negra.png"
+            alt="img 3"
+          />
+        </div>
+      </div>
+
+      <div class="menu__footer">
+        <ul class="menu__info">
+          <li class="menu__more"><a href="#" class="menu__a">About</a></li>
+          <li class="menu__more"><a href="#" class="menu__a">Contact</a></li>
+          <li class="menu__more"><a href="#" class="menu__a">Dealers</a></li>
+          <li class="menu__more"><a href="#" class="menu__a">News</a></li>
+          <li class="menu__more"><a href="#" class="menu__a">Care</a></li>
+          <li class="menu__more"><a href="#" class="menu__a">Press</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

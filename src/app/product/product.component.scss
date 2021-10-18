@@ -1,0 +1,246 @@
+.slid {
+  width: 100%;
+  height: 90vh;
+  padding: 0 2em;
+
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  padding: 0 5em;
+
+  @media only screen and (max-width: 550px) {
+    width: 100%;
+    padding: 0 1em;
+  }
+  &__module {
+    max-width: 1400px;
+    margin: auto;
+    position: relative;
+    @media only screen and (max-width: 550px) {
+      // position: relative;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      height: inherit;
+    }
+  }
+
+  &__module {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+  }
+  &__cont {
+    max-width: 350px;
+    min-height: 350px;
+    width: 50%;
+    overflow: hidden;
+
+    padding: 200px 0;
+
+    @media only screen and (max-width: 1024px) {
+      width: 100%;
+      padding: 4em 0;
+      // position: absolute;
+    }
+
+    &:nth-child(1) {
+      @media only screen and (max-width: 1024px) {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 0;
+      }
+      @media only screen and (max-width: 550px) {
+        bottom: -94px;
+        right: 0;
+        z-index: 100;
+      }
+    }
+
+    &--img {
+      height: 100vh;
+
+      max-width: 700px;
+
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      // justify-content: end;
+
+      @media only screen and (max-width: 1024px) {
+        margin: auto;
+      }
+    }
+  }
+
+  &__contnt {
+    width: 100%;
+
+    // min-height: 300px;
+
+    min-height: 200px;
+    display: flex;
+    flex-flow: column;
+    align-items: initial;
+    justify-content: flex-end;
+    @media only screen and (max-width: 505px) {
+      min-height: 100px;
+    }
+  }
+
+  &__img {
+    padding: 0 3em 60em 7em;
+    @media only screen and (max-width: 1024px) {
+      padding: 6em 2em 60em 2em;
+      max-width: 50vh;
+    }
+    @media only screen and (max-width: 550px) {
+      padding: 1em 2em 60em 2em;
+    }
+  }
+
+  &__ctr {
+    height: 88px;
+    width: 100%;
+    padding: 0 5em;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+
+    background: white;
+    background-color: #ffffff82;
+    border-top: solid 2px #f2f2f2;
+    @media only screen and (max-width: 550px) {
+      height: 60px;
+      padding: 0 1em;
+    }
+  }
+
+  &__author {
+    font-size: 1em;
+    margin: 0 0 1em 0;
+    color: #999999;
+    font-weight: 600;
+    @media only screen and (max-width: 550px) {
+      font-size: 0.8em;
+      margin: 0 0 0.6em 0;
+    }
+  }
+  &__btn {
+    position: absolute;
+    background-color: #000;
+    top: 450px;
+    left: 0;
+    color: #fff;
+    padding: 0.8em;
+    font-weight: 600;
+
+    opacity: 0;
+
+    @media only screen and (max-width: 1024px) {
+      top: initial;
+      bottom: 131px;
+    }
+    @media only screen and (max-width: 550px) {
+      bottom: 77px;
+      z-index: 100;
+    }
+  }
+  &__h2 {
+    font-size: 1.5em;
+    font-weight: 900;
+    margin: 0 0 1.7em;
+    @media only screen and (max-width: 550px) {
+      margin: 0 0 0.7em;
+      font-size: 1.4em;
+    }
+  }
+  &__p {
+    color: #999999;
+    font-weight: 400;
+    @media only screen and (max-width: 550px) {
+      font-size: 0.8em;
+    }
+  }
+
+  &__ul {
+    max-width: 1400px;
+    height: inherit;
+    margin: auto;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: center;
+  }
+  &__item {
+    font-size: 0.8em;
+    font-weight: 600;
+    padding: 2.5vh 0 0;
+    margin: 0 2em 0 0;
+
+    cursor: pointer;
+    position: relative;
+    color: #999999;
+    transition: all 0.5s ease-out;
+
+    @media only screen and (max-width: 550px) {
+      font-size: 0.7em;
+    }
+  }
+  &__item.ver {
+    cursor: auto;
+    position: default;
+    color: #000000;
+  }
+
+  &__item::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    transition: all 0.5s ease-out;
+    opacity: 0;
+  }
+  &_item.ver::after {
+  }
+
+  &__num {
+    width: 100%;
+  }
+  &__txt {
+    width: 100%;
+
+    background-color: orange;
+  }
+}
+
+// /////////////////// PREPARANDO JS /////////////
+
+.slid__contnt {
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+.slid__img {
+  transition: transform 0.5s ease-out;
+}
+.slid__contnt.ver,
+.slid__btn.ver {
+  opacity: 1;
+  z-index: 100;
+}
+.slid__item.ver::after {
+  width: 100%;
+  opacity: 1;
+}
